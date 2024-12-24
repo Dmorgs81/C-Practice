@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+
+#define MYSTRING "Once there was a way"
+
+int main(int argc, char *argv[])
+{
+    char *pString0 = malloc(4);
+    char *pString1 = malloc(strlen(MYSTRING)); /*Not enough space being allocated to fix it would be
+                                char *pString1 = malloc(strlen(MYSTRING) +1)  to account for the NULL Terminator*/
+    char *pString2 = malloc(4);
+
+    pString0[0] = 'A';
+    pString0[1] = 'B';
+    pString0[2] = 'C';
+    pString0[3] = '\0';
+
+    strcpy(pString1, MYSTRING);
+
+    pString2[0] = 'D';
+    pString2[1] = 'E';
+    pString2[2] = 'F';
+    pString2[3] = '\0';
+
+    printf("pString0 = %s\n", pString0);
+    printf("pString1 = %s\n", pString1);
+    printf("pString2 = %s\n", pString2);
+
+    free(pString0);
+    free(pString1);
+    free(pString2);
+
+    return 0;
+}
