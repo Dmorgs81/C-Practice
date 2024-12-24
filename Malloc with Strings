@@ -1,0 +1,17 @@
+// Practice with Malloc
+
+//Using Strings
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define WORD "Hello" /*Since this is a String it accounts for the NULL Terminator if it were
+                      were written as 'H', 'e', 'l', 'l', 'o', '\0' it wouldn't work*/
+
+int main(void)
+{
+    char *copyWord = malloc(sizeof(WORD)); //making the pointer and declaring the space needed
+    strcpy(copyWord, WORD); //copying it over, remember strcpy(address, what you want to copy)
+    printf("%s", copyWord); 
+    free(copyWord); //freeing to prevent memory leaks
+} 
