@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+//prints the address of x in Hexidecimal
+
+int main(void)
+{
+    int x = 2;
+    int *ptRx = &x;
+    printf("%p", &x);
+}
+
+
+
+void changeXValue(int *x)
+{
+    *x = 10; // Modify the value of x that the pointer is pointing to
+}
+
+int main(void)
+{
+    int x = 2;  // Initial value of x
+    printf("Before: %d\n", x);  // Print the value of x before the change
+
+    changeXValue(&x);  // Pass the address of x to change its value
+    printf("After: %d\n", x);  // Print the value of x after the change
+
+    return 0;
+}
+
