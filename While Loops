@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main(void)
+{
+    int x = 0; // declares x
+    while(x < 21) //checks to see if x is less than 21
+    {
+        printf("\n%d", x); //prints x
+        x++; //increments x
+    }
+}
+
+
+//Prints Nothing because 0 means false
+int main(void)
+{
+    while(0)
+    {
+        printf("Hello World");
+    }
+}
+//SAME AS
+int main(void)
+{
+    while(false)
+    {
+        printf("Hello World");
+    }
+}
+
+//Prints Infinite Hello Worlds because 1 means true
+int main(void)
+{
+    while(1)
+    {
+        printf("Hello World ");
+    }
+}
+//SAME AS
+int main(void)
+{
+    while(true)
+    {
+        printf("Hello World");
+    }
+}
