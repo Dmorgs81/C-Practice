@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void)
+{
+    char word[] = "MickeyMouse";
+    
+    // Allocate memory for the string (length of word + 1 for the null terminator)
+    char *Storage = malloc(strlen(word) + 1); //strlen() is used to find the String Length
+    strcpy(Storage, word); // Copy the string into Storage
+    printf("%s\n", Storage); 
+
+    free(Storage); // Free the allocated memory
+
+    return 0;
+}
