@@ -1,0 +1,32 @@
+//2D Arrays (Code Prints 2D array)
+
+
+#include <stdio.h>
+#define ROWS 10
+#define COLUMNS 10
+
+void initializeArray(int arr[ROWS][COLUMNS]) {
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLUMNS; j++) {
+            arr[i][j] = i * j;
+        }
+    }
+}
+
+void printArray(int arr[ROWS][COLUMNS]) {
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLUMNS; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main(void) {
+    int arr[ROWS][COLUMNS]; // Declare the array in main
+    initializeArray(arr);   // Initialize the array
+    printArray(arr);        // Print the array
+    return 0;
+}
+
+
