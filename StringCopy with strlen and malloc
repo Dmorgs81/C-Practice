@@ -15,3 +15,22 @@ int main(void)
 
     return 0;
 }
+
+// ALTERNATIVELY
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define WORD "MickeyMouse"
+
+int main(void)
+{    
+    // Allocate memory for the string (length of word + 1 for the null terminator)
+    char *Storage = malloc(11 *(sizeof(char)) + 1); //sizeof(char) * 11 = 11 this is used to find the String Length
+    strcpy(Storage, WORD); // Copy the string into Storage
+    printf("%s\n", Storage); 
+
+    free(Storage); // Free the allocated memory
+
+    return 0;
+}
