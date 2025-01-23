@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int power(int a, int b)
+{
+    int number = pow(a,b);
+}
+
+
+int main(void)
+{
+    int calc = power(2,5);
+    printf("%d", calc);
+}
