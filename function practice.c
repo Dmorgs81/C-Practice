@@ -47,3 +47,26 @@ void defineArray(int myArray[5][5]) {
     }
 }
 
+#include <stdio.h>
+
+int findmin(int a, int b)
+{
+    if(a > b)
+    {
+        return b;
+    }
+    else
+    {
+        return a;
+    }
+}
+
+
+
+int main()
+{
+    int min = findmin(10,-8);
+    printf("%d", min);
+}
+
+
