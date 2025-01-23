@@ -19,3 +19,29 @@ void changeValue(int *a)
 {
   *(a+1) = 5; //change to modify different parts of the array
 }
+
+//Second Example
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+void changeValue(int *a);
+
+int main()
+{
+    int arr[5] = {12, 15, 12, 17, 18};
+    
+    for(int i = 0; i < 5; i++)
+    {
+        changeValue(arr + i); // changes them all to 5
+        printf("%d ", arr[i]);
+    }
+}
+
+void changeValue(int *a)
+{
+  *a = 5; //change to modify different parts of the array
+}
