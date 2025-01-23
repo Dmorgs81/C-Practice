@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+    char Artist [] = "Juice Wrld";
+    char *Storage = malloc(strlen(Artist));
+    strcpy(Storage, Artist);
+    printf("%s", Storage);
+    free(Storage);
+}
