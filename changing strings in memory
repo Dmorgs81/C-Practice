@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void changeWord(char *Rapper, const char *newWord);
+
+int main() {
+    char Rapper[] = "Juice Wrld";
+    printf("Original Word: %s\n", Rapper);
+
+    // Change the word
+    changeWord(Rapper, "XXtension");
+
+    printf("Modified Word: %s\n", Rapper);
+
+    return 0;
+}
+
+void changeWord(char *Rapper, const char *newWord) {
+    // Use strcpy to copy the new word into the Rapper array
+    strcpy(Rapper, newWord);
+}
