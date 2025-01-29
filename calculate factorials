@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int calculateFactorial(int number);  // Function prototype
+
+int main() 
+{
+    int number = 0;  // Define a number to calculate factorial
+    printf("Enter a number ");
+    scanf("%d", &number);
+    int result = calculateFactorial(number);  // Call function
+    printf("Factorial of %d is %d\n", number, result);
+    return 0;
+}
+
+int calculateFactorial(int number)  // Corrected function signature
+{
+    int calculation = 1;
+    
+    while (number > 1)  // Correct factorial calculation
+    {
+        calculation *= number;  // Multiply current value
+        number--;  // Decrement number
+    }
+
+    
+    return calculation;  // Return the computed factorial
+}
