@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void changeWord(char *word);
+void makeStorage(char *word, char **Storage);
+
+int main(void)
+{
+    char *Storage = NULL;  // Correctly declare Storage as a pointer
+    char word[] = "Apple";
+
+    changeWord(word); 
+    makeStorage(word, &Storage); // Allocate memory for Storage and copy word
+
+    printf("%s\n", Storage);  // Print the stored word
+
+    free(Storage);  // Free allocated memory
+    return 0;
+}
+
+void changeWord(char *word)
+{
+    strcpy(word, "Food");  // Copy new word
+}
+
+void makeStorage(char *word, char **Storage)
+{
+    *Storage = malloc(strlen(word) + 1);  // Allocate memory for word (+1 for '\0')
+    if (*Storage == NULL)
+    {
+        printf("Memory allocation failed\n");
+        exit(1);
+    }
+    strcpy(*Storage, word);  // Copy the modified word into Storage
+}
