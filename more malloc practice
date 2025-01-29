@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define GREETING "Hello"
+
+int main()
+{
+    //char *Storage = malloc((sizeof(char)*5)+1);
+    char *Storage = malloc(strlen(GREETING)+1); //without the +1 it overflows
+    strcpy(Storage, GREETING);
+    printf("%s", Storage);
+    free(Storage);
+    
+}
