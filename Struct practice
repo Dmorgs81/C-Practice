@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct cars
+{
+    char name[20];
+    char color[20];
+    int year;
+    int maxSpeed;
+};
+
+int main() {
+   struct cars car1;
+   // Assigning values
+    strcpy(car1.name, "Ford Mustang");
+    strcpy(car1.color, "Red");
+    car1.year = 2022;
+    car1.maxSpeed = 250;
+
+    // Printing values
+    printf("Car Name: %s\n", car1.name);
+    printf("Color: %s\n", car1.color);
+    printf("Year: %d\n", car1.year);
+    printf("Max Speed: %d km/h\n\n", car1.maxSpeed);
+    
+    struct cars car2;
+   // Assigning values
+    strcpy(car2.name, "Lamborghini Revuelto");
+    strcpy(car2.color, "Red");
+    car2.year = 2025;
+    car2.maxSpeed = 217;
+
+    // Printing values
+    printf("Car Name: %s\n", car2.name);
+    printf("Color: %s\n", car2.color);
+    printf("Year: %d\n", car2.year);
+    printf("Max Speed: %d km/h\n", car2.maxSpeed);
+}
