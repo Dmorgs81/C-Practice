@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    int binary[32]; // Array to store binary digits (for 32-bit integers)
+    int i = 0;
+
+    if (num == 0) {
+        printf("0\n"); // Special case for 0
+        return 0;
+    }
+
+    // Convert to binary
+    while (num > 0) {
+        binary[i] = num % 2; // Store remainder (0 or 1)
+        num /= 2;            // Divide number by 2
+        i++;
+    }
+
+    // Print binary in reverse order
+    printf("Binary: ");
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
